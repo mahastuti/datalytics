@@ -1,59 +1,75 @@
 "use client"
 import React from "react";
-import { assets} from "@/assets/assets";
-import Link from "next/link"
+import { assets } from "@/assets/assets";
+import Link from "next/link";
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
-import { useClerk } from "@clerk/nextjs"
+import { useClerk } from "@clerk/nextjs";
 
 const Navbar = () => {
-
-  const { isSeller, router, user } = useAppContext();
-  const {openSignIn} = useClerk()
+  const { router, user } = useAppContext();
+  const { openSignIn } = useClerk();
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
+    <nav className="flex items-center justify-between px-2 md:px-16 lg:px-32 py-1 pb-3 border-b border-gray-300 text-gray-700 mb-4">
       <Image
-        className="cursor-pointer w-28 md:w-32"
-        onClick={() => router.push('/')}
+        className="cursor-pointer w-32 md:w-32"
+        onClick={() => router.push("/")}
         src={assets.logo}
         alt="logo"
       />
-      <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
+
+      <div className="flex items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 max-md:hidden">
+        <Link
+          href="/"
+          className="hover:text-orange-500 hover:font-semibold transition"
+        >
           Home
         </Link>
-        <Link href="/all-products" className="hover:text-gray-900 transition">
+
+        <Link
+          href="/all-products"
+          className="hover:text-orange-500 hover:font-semibold transition"
+        >
           Shop
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
-          About Us
-        </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
+
+        <Link
+          href="#contact"
+          className="hover:text-orange-500 hover:font-semibold transition"
+        >
           Contact
         </Link>
-
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
-
+        
+          <button
+            onClick={() => router.push("/seller")}
+            className="text-xs bg-orange-500 text-white px-4 py-1.5 rounded-full hover:bg-orange-600 transition"
+          >
+            Upload Data
+          </button>
       </div>
-
-      <ul className="hidden md:flex items-center gap-4 ">
-        <Image className="w-4 h-4" src={assets.search_icon} alt="search icon" />
-        {
-        user 
-          ? <>
-          <UserButton />
+      <ul className="hidden md:flex items-center gap-4">
+        {user ? (
+          <>
+            <UserButton />
           </>
-          : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
-            <Image src={assets.user_icon} alt="user icon" />
-            Account
-          </button>}
+        ) : (
+          <button
+            onClick={openSignIn}
+            className="flex items-center gap-2 hover:text-orange-500 hover:font-semibold transition"
+          >
+            <Image src={assets.user_icon} alt="user icon" className="w-6 h-6" />
+          </button>
+        )}
       </ul>
 
       <div className="flex items-center md:hidden gap-3">
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
-        <button className="flex items-center gap-2 hover:text-gray-900 transition">
-          <Image src={assets.user_icon} alt="user icon" />
+        <button className="group flex items-center gap-2 hover:text-orange-500 hover:font-semibold transition">
+          <Image
+            src={assets.user_icon}
+            alt="user icon"
+            className="w-6 h-6 transition group-hover:brightness-0 group-hover:invert group-hover:sepia group-hover:hue-rotate-30"
+          />
           Account
         </button>
       </div>

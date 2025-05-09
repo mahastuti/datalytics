@@ -20,9 +20,13 @@ import heart_icon from "./heart_icon.svg";
 import star_icon from "./star_icon.svg";
 import redirect_icon from "./redirect_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
-import header_headphone_image from "./header_headphone_image.png";
-import header_playstation_image from "./header_playstation_image.png";
-import header_macbook_image from "./header_macbook_image.png";
+import header_datalytics from "./header_datalytics.png";
+import header_1 from "./header_1.png";
+import header_2 from "./header_2.png";
+import header_3 from "./header_3.png";
+//import header_headphone_image from "./header_headphone_image.png";
+//import header_playstation_image from "./header_playstation_image.png";
+//import header_macbook_image from "./header_macbook_image.png";
 import macbook_image from "./macbook_image.png";
 import bose_headphone_image from "./bose_headphone_image.png";
 import apple_earphone_image from "./apple_earphone_image.png";
@@ -70,9 +74,13 @@ export const assets = {
   star_icon,
   redirect_icon,
   star_dull_icon,
-  header_headphone_image,
-  header_playstation_image,
-  header_macbook_image,
+  header_datalytics,
+  header_1,
+  header_2,
+  header_3,
+  //header_headphone_image,
+  //header_playstation_image,
+  //header_macbook_image,
   macbook_image,
   bose_headphone_image,
   apple_earphone_image,
