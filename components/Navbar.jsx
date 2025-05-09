@@ -31,7 +31,7 @@ const Navbar = () => {
           href="/all-products"
           className="hover:text-orange-500 hover:font-semibold transition"
         >
-          Shop
+          Analyst
         </Link>
 
         <Link

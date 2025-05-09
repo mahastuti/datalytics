@@ -15,7 +15,7 @@ const HeaderSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-    }, 9000); 
+    }, 9000);
     return () => clearInterval(interval);
   }, [sliderData.length]);
 
@@ -25,6 +25,7 @@ const HeaderSlider = () => {
 
   return (
     <div className="overflow-hidden">
+      {/* Carousel */}
       <div
         className="flex transition-transform duration-1000 fade-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -47,6 +48,7 @@ const HeaderSlider = () => {
         ))}
       </div>
 
+      {/* Slide Indicators */}
       <div className="flex items-center justify-center gap-2.5 mt-6">
         {sliderData.map((_, index) => (
           <div
@@ -57,6 +59,19 @@ const HeaderSlider = () => {
             }`}
           />
         ))}
+      </div>
+
+      {/* Description + Button */}
+      <div className="text-center mt-9 px-6 md:px-7">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#113565] mb-">
+          Selamat Datang di Datalytics
+        </h2>
+        <p className="text-gray-700 text-lg md:text-xl mt-6 mb-6 max-w-3xl mx-auto">
+          Platform yang mempertemukan Anda dengan para profesional analisis data untuk mendukung keputusan bisnis yang lebih baik.
+        </p>
+        <button className="bg-[#113565] hover:bg-[#0e2b53] text-white px-6 py-3 rounded-full font-semibold transition">
+          Analisis datamu sekarang
+        </button>
       </div>
     </div>
   );
