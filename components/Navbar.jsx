@@ -28,7 +28,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/all-products"
+          href="/"
           className="hover:text-orange-500 hover:font-semibold transition"
         >
           Analyst
@@ -42,10 +42,10 @@ const Navbar = () => {
         </Link>
         
           <button
-            onClick={() => router.push("/seller")}
+            onClick={() => router.push("/")}
             className="text-xs bg-orange-500 text-white px-4 py-1.5 rounded-full hover:bg-orange-600 transition"
           >
-            Upload Data
+            Progress Analisis Data Anda
           </button>
       </div>
       <ul className="hidden md:flex items-center gap-4">

@@ -2,11 +2,11 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center space-y-2 pb-10">
+    <div className="flex flex-col items-center justify-center text-center space-y-2 pb-9">
       <h1 className="md:text-4xl text-2xl font-medium">
         Tetap Bersama Kami :)
       </h1>
-      <p className="md:text-base text-gray-500/80 py-2 pb-3">
+      <p className="md:text-base text-gray-500/80 py-2 pb-5">
         Langganan <i>newsletter</i> kami biar bisa kami 'spam'<br />
         dengan penawaran seru, berita terbaru, dan diskon!
       </p>

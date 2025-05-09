@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeaderSlider = () => {
   const sliderData = [
@@ -69,9 +70,11 @@ const HeaderSlider = () => {
         <p className="text-gray-700 text-lg md:text-xl mt-6 mb-6 max-w-3xl mx-auto">
           Platform yang mempertemukan Anda dengan para profesional analisis data untuk mendukung keputusan bisnis yang lebih baik.
         </p>
-        <button className="bg-[#113565] hover:bg-[#0e2b53] text-white px-6 py-3 rounded-full font-semibold transition">
-          Analisis datamu sekarang
-        </button>
+        <Link href="/seller">
+          <button className="bg-[#113565] hover:bg-[#0e2b53] text-white px-6 py-3 rounded-full font-semibold transition">
+            Analisis Data Anda Sekarang
+          </button>
+        </Link>
       </div>
     </div>
   );
