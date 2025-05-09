@@ -1,7 +1,7 @@
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
 export default clerkMiddleware({
-  secretKey: process.env.CLERK_SECRET_KEY,
+  secretKey: 'sk_test_Z9JCOHUQfrA9qYXqFxGHCB2hE3RE48ZaQMktO5oXqK',
 });
 
 export const config = {
