@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import React from "react";
 import { assets } from "@/assets/assets";
 import Link from "next/link";
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
-import { useClerk } from "@clerk/nextjs";
+import { useClerk, UserButton } from "@clerk/nextjs"; 
+
 
 const Navbar = () => {
   const { router, user } = useAppContext();
