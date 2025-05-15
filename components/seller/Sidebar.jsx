@@ -8,8 +8,8 @@ const SideBar = () => {
     const pathname = usePathname()
     const menuItems = [
         { name: 'Add Product', path: '/seller', icon: assets.add_icon },
-        { name: 'Booklet', path: '/', icon: assets.product_list_icon },
-        { name: 'History Orders', path: '/', icon: assets.order_icon },
+        { name: 'Booklet', path: '/all-products', icon: assets.product_list_icon },
+        { name: 'History Orders', path: '/my-orders', icon: assets.order_icon },
     ];
 
     return (

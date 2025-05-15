@@ -28,26 +28,16 @@ const Navbar = () => {
           Home
         </Link>
 
-        <Link
-          href="/"
-          className="hover:text-orange-500 hover:font-semibold transition"
-        >
-          Analyst
-        </Link>
-
-        <Link
-          href="#contact"
-          className="hover:text-orange-500 hover:font-semibold transition"
+        <a
+          href="https://instagram.com/psthimasta"  // Ganti dengan link IG kamu
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-orange-500 hover:font-semibold transition cursor-pointer"
         >
           Contact
-        </Link>
+        </a>
         
-          <button
-            onClick={() => router.push("/")}
-            className="text-xs bg-orange-500 text-white px-4 py-1.5 rounded-full hover:bg-orange-600 transition"
-          >
-            Progress Analisis Data Anda
-          </button>
+    
       </div>
       <ul className="hidden md:flex items-center gap-4">
         {user ? (
